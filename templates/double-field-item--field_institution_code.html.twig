@@ -1,0 +1,6 @@
+{% if item.first is same as('VIAF') %}
+  {% set link = "http://viaf.org/viaf/" ~ item.second %}
+{% elseif item.first is same as ('ROR') %}
+  {% set link = "https://ror.org/" ~ item.second %}
+{% endif %}
+{{ item.first }}: <a href={{ link }} target=_blank>{{ item.second }}</a>

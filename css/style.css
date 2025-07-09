@@ -1,0 +1,10 @@
+ul.sf-menu li.sf-depth-1.menuparent ul {
+  margin-top: -8px;
+}
+
+
+@media (max-width: 900px) {
+  ul.sf-menu li.sf-depth-1.menuparent ul {
+    margin-top: 0;
+  }
+}
