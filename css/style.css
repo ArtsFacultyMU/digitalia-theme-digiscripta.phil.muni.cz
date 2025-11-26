@@ -12,3 +12,12 @@ ul.sf-menu li.sf-depth-1.menuparent ul {
     margin-top: 0;
   }
 }
+
+div.view-id-hus_browse table td.views-field-title {
+  min-width: 8rem;
+}
+
+
+div.view-id-hus_browse table td.views-field-field-mihoo-identifier {
+  min-width: 5rem;
+}
