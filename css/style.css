@@ -7,9 +7,12 @@ div.block-simple-blockmihoo-jumbotron > div.content {
 }
 
 ul.sf-menu li.sf-depth-1.menuparent ul {
-  margin-top: 0px;
+  margin-top: -5px;
 }
 
+ul.sf-menu li ul li {
+  min-width: 7rem;
+}
 
 @media (max-width: 900px) {
   ul.sf-menu li.sf-depth-1.menuparent ul {
@@ -18,10 +21,219 @@ ul.sf-menu li.sf-depth-1.menuparent ul {
 }
 
 div.view-id-hus_browse table td.views-field-title {
-  min-width: 8rem;
+  min-width: 12rem;
 }
 
 
-div.view-id-hus_browse table td.views-field-field-mihoo-identifier {
+div.view-id-hus_browse table td.views-field-mihoo-title {
   min-width: 5rem;
+}
+
+div#sidebar-first:empty {
+  display: none;
+}
+
+@media (min-width: 851px) {
+  #sidebar-first {
+    width: auto;
+  }
+
+  #sidebar-first:has(*) {
+    width: 25%; /* real size when it contains content */ 
+    margin-left: -100%;
+  }
+
+  #sidebar-first::not(:has(*)) {
+    display: none;
+  }
+
+
+  #sidebar-first:empty {
+    display: none;
+  }
+}
+
+.bef-exposed-form .form--inline > .form-item {
+}
+
+div.form--inline {
+}
+
+div.xfields-block {
+  display: flex;
+}
+
+div.xfields-block > div.js-form-item {
+  margin-right: 1.2rem;
+}
+
+div.xfields-block > div.form-item {
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+}
+
+#edit-items-per-page,
+div.xfields-block  select.form-select {
+  height: 2.17rem;
+  margin-top: 2px;
+}
+
+div.view-hus-browse > div.view-filters > form > div.form--inline {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+div.view-hus-browse > div.view-filters > form > div.form--inline > div.js-form-item {
+  margin-bottom: 0;
+}
+
+
+div.view-hus-browse > div.view-filters > form > div.form--inline > div.form-actions {
+  margin: 0; 
+}
+
+
+div.view-hus-browse > div.view-filters > form > div.form--inline > div.form-actions > input.button {
+  margin: 0;
+  height: 2.3rem;
+  padding: .3rem 1rem;
+}
+
+/*
+div.xfields-block > div.form-item-fulltext {
+  flex-grow: 2;
+}
+*/
+
+#edit-fulltext {
+  width: 38.3rem;
+}
+
+#edit-field-language,
+#edit-year-to,
+#edit-year-from,
+#edit-field-language,
+#edit-field-shelf-number, 
+#edit-field-edition-number-1,
+#edit-field-bs-identifier,
+#edit-field-edition-number-1--description,
+#edit-field-bs-identifier--description {
+  width: 12rem;
+}
+
+#edit-titles,
+#edit-author,
+#edit-field-incipit,
+#edit-field-explicit {
+  width: 18.6rem;
+}
+
+#edit-items-per-page {
+  width: 8rem;
+}
+
+#advanced-search {
+/*  border-top: 1px solid lightgrey; */
+  margin-top: 1rem;
+  width: 38.5rem;
+  padding-top: 1rem;
+}
+
+#main-wrapper a[href^="http"]:not([href*="digiscripta.phil.muni.cz"])::after {
+  content: "";
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-left: 0.25em;
+  background: url("/themes/custom/islandora_muni/images/external-link.svg") no-repeat center;
+  background-size: contain;
+  vertical-align: super;
+  color: #004899;
+  filter: opacity(60%);
+}
+
+.form-item .description {
+  margin-left: 0px;
+}
+
+.tooltip::before {
+  content: " i ";
+  border: 1px solid #555;
+  padding: 0px 6px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: inherit;
+  background-color: white;
+  font-family: sans-serif;
+  vertical-align: middle;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  font-size: 14px;   /* or 1rem */
+  font-weight: normal;
+  visibility: hidden;
+  max-width: 980px;
+  min-width: 460px;
+  background-color: white;
+  color: inherit;
+  text-align: left;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 2px solid #555;
+  box-shadow: 5px 10px 8px #888888;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 0%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.icon-info {
+  float: left;
+  border: 1px solid #0000dc;
+  background-color: #DDDDDD;
+  display: none;
+}
+
+#block-islandora-muni-contenttype > h2 {
+  display: inline-block;
+}
+
+#block-islandora-muni-page-title > div {
+  display: inline-block;
+}
+
+em {
+        font-style: italic;
+}
+
+.locked-image-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 250px; /* adjust based on your thumbnails */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f5f5f5; /* optional placeholder bg */
+}
+
+.locked-image-wrapper img {
+  width: 40px;   /* fixed size everywhere */
+  height: 40px;
+  object-fit: contain;
+  opacity: 0.7; /* optional subtle look */
 }
